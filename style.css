@@ -15,6 +15,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     background-color: var(--bg-color);
     font-family: var(--font-sans);
@@ -24,6 +29,7 @@ body {
     align-items: flex-start;
     min-height: 100vh;
     padding: 0;
+    margin: 0;
 }
 
 .container {
