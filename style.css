@@ -1,12 +1,12 @@
 :root {
-    --bg-color: #FDF9F3;
-    --btn-color: #885c4e;
-    --btn-hover: #754d41;
-    --text-primary: #4D4D4D;
+    --bg-color: #FAF6F1;
+    --btn-color: #AF8E84;
+    --btn-hover: #9E7D73;
+    --text-primary: #5C4B44;
     --text-secondary: #8E7A6E;
     --font-script: 'Great Vibes', cursive;
     --font-sans: 'Montserrat', sans-serif;
-    --accent-glow: rgba(230, 159, 131, 0.4);
+    --accent-glow: rgba(175, 142, 132, 0.3);
 }
 
 * {
@@ -47,21 +47,24 @@ body {
 }
 
 .image-arch {
-    width: 100%;
-    height: 400px;
+    width: 82%; /* Largura reduzida para não encostar nas bordas */
+    height: 420px; /* Altura ajustada para equilibrar o enquadramento */
     position: relative;
     overflow: hidden;
-    border-bottom-left-radius: 50% 120px;
-    border-bottom-right-radius: 50% 120px;
-    margin-bottom: 30px;
-    box-shadow: 0 15px 30px -10px var(--accent-glow);
+    border-radius: 0 0 200px 200px; /* Arco mais definido e centralizado */
+    margin-bottom: 25px;
+    margin-top: 20px; /* Pequeno respiro no topo */
+    /* Borda dourada sofisticada */
+    border: 5px solid #C5A059;
+    border-top: none;
+    box-shadow: 0 10px 30px rgba(197, 160, 89, 0.2);
 }
 
 .image-arch img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 20%; /* Foca na parte superior da foto (rosto) */
+    object-position: center 0%; /* Foca do topo para baixo para mostrar o rosto e a obra */
     display: block;
 }
 
@@ -69,13 +72,13 @@ body {
 .image-arch::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
-    height: 40px;
-    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
-    z-index: 1;
+    width: 100%;
+    height: 60px;
+    background: radial-gradient(ellipse at bottom, rgba(197, 160, 89, 0.4) 0%, transparent 70%);
+    z-index: -1;
 }
 
 .name {
@@ -88,11 +91,12 @@ body {
 }
 
 .subtitle {
-    font-size: 0.85rem;
-    letter-spacing: 4px;
+    font-size: 0.75rem;
+    letter-spacing: 5px;
     color: var(--text-secondary);
     font-weight: 400;
     text-transform: uppercase;
+    margin-top: -5px;
 }
 
 .links {
@@ -129,7 +133,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 40px 0 20px;
+    margin: -10px 0 20px;
     padding: 0 20px;
 }
 
@@ -147,37 +151,13 @@ body {
     transform: scale(1.05);
 }
 
-.footer {
-    margin-top: auto;
-    padding: 20px 0 40px;
-}
 
-.instagram-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--text-primary);
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 400;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-}
-
-.instagram-link:hover {
-    opacity: 1;
-}
-
-.instagram-link svg {
-    width: 18px;
-    height: 18px;
-}
 
 @media (max-width: 480px) {
     .image-arch {
-        height: 320px;
-        border-bottom-left-radius: 50% 80px;
-        border-bottom-right-radius: 50% 80px;
+        width: 85%;
+        height: 380px;
+        border-radius: 0 0 180px 180px;
     }
     
     .name {
