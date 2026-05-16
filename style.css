@@ -64,7 +64,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 0%; /* Foca do topo para baixo para mostrar o rosto e a obra */
+    object-position: center -30px; /* Sobe o enquadramento interno da foto */
     display: block;
 }
 
